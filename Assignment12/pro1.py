@@ -101,34 +101,34 @@ def AC_3(domains, trace_limit=10):
     return True, trace
 
 
-print("=== Case 1: Initial domains for all teams ===")
+print(" Case 1: Initial domains for all teams ")
 domains_case1 = initial_domains()
 result1, trace1 = AC_3(domains_case1, trace_limit=10)
 
-print("\n--- AC-3 Algorithm Trace for Case 1 ---")
+print("\nAC-3 Algorithm Trace for Case 1 ")
 for step_no, step in enumerate(trace1, start=1):
     print(f"Step {step_no}:")
     print(step)
 
-print("\n--- Final Result for Case 1 ---")
+print("\nFinal Result for Case 1 ")
 print(f"Arc Consistent: {result1}")
 print(f"Domains after AC-3: {domains_case1}")
-print("==========================================\n")
+print("\n")
 
 
-print("=== Case 2: Pre-assign P1 = R1 and check arc consistency ===")
+print("Case 2: Pre-assign P1 = R1 and check arc consistency ")
 domains_case2 = initial_domains()
 domains_case2["P1"] = ["R1"]
 print(f"Initial state: Domain of P1 is restricted to ['R1']\n")
 result2, trace2 = AC_3(domains_case2, trace_limit=10)
 
-print("--- AC-3 Algorithm Trace for Case 2 ---")
+print(" AC-3 Algorithm Trace for Case 2 ")
 for step_no, step in enumerate(trace2, start=1):
     print(f"Step {step_no}:")
     print(step)
 
-print("\n--- Final Result for Case 2 ---")
+print("\nFinal Result for Case 2 ")
 print(f"Arc Consistent: {result2}")
 print(f"Domains after AC-3: {domains_case2}")
-print("==========================================")
+
 
